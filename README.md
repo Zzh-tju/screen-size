@@ -34,3 +34,6 @@ pip install Pillow
 运行`draw.py`，得到银幕尺寸图，水平分辨率默认为4000。
 
 结果保存于`size/`文件夹下。([这里](https://github.com/Zzh-tju/screen-size/tree/main/size)提供了一些成品绘制图，影厅信息采集于2023.6.24，具有超过4块IMAX银幕的城市，排除了无银幕尺寸信息的影厅。)
+
+<img src="size/上海.png" width="600px"/>
+<img src="size/昆明.png" width="600px"/>
