@@ -27,8 +27,10 @@ pip install Pillow
 
 将"C:\Windows\Fonts\微软雅黑"复制到本文件夹`screen-size/`下。
 
-运行`convert.py`，将size.txt转成size1.txt。
+运行`convert.py`，将size.txt转成size1.txt。(这里我已经准备好了size1.txt，如需自己绘制其他影厅或城市，则需要自行准备)
 
 `说明：name.txt与size1.txt即为我们想要的，每一行对应一个影厅与银幕尺寸，不同的城市由短连接号隔开。`
 
 运行`draw.py`，得到银幕尺寸图，水平分辨率默认为4000。
+
+结果保存于`size/`文件夹下。(这里提供了一些成品绘制图，影厅信息采集于2023.6.24，具有超过4块IMAX银幕的城市，排除了无银幕尺寸信息的影厅。)
