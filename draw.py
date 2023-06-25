@@ -80,13 +80,13 @@ with open('/home/ubuntu/ZZH/mv/size1.txt','r+') as f:
                     img_pil = Image.fromarray(img)
                     draw = ImageDraw.Draw(img_pil)
                     if y[ind][i][1]=='IMAX':
-                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - Êý×ÖIMAX (' + str(w) +'m ¡Á ' + str(h) +'m = ' + str(area) + 'm^2)'
+                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - æ•°å­—IMAX (' + str(w) +'m Ã— ' + str(h) +'m = ' + str(area) + 'm^2)'
                     if y[ind][i][1]=='GT':
-                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - Ò»´ú¼¤¹âIMAX GT (' + str(w) +'m ¡Á ' + str(h) +'m = ' + str(area) + 'm^2)'
+                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - ä¸€ä»£æ¿€å…‰IMAX GT (' + str(w) +'m Ã— ' + str(h) +'m = ' + str(area) + 'm^2)'
                     if y[ind][i][1]=='cola':
-                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - ¶þ´ú¼¤¹âIMAX Commercial Laser (' + str(w) +'m ¡Á ' + str(h) +'m = ' + str(area) + 'm^2)'
+                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - äºŒä»£æ¿€å…‰IMAX Commercial Laser (' + str(w) +'m Ã— ' + str(h) +'m = ' + str(area) + 'm^2)'
                     if y[ind][i][1]=='xt':
-                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - Èý´ú¼¤¹âIMAX XT (' + str(w) +'m ¡Á ' + str(h) +'m = ' + str(area) + 'm^2)'
+                        ss=str(i+1) + '. ' + y[ind][i][0] + ' - ä¸‰ä»£æ¿€å…‰IMAX XT (' + str(w) +'m Ã— ' + str(h) +'m = ' + str(area) + 'm^2)'
 
                     draw.text((place_x, place_y-5*res-13*res*(m+1)+i*13*res),ss, font=font, fill=RGB2BGR(colors.hex2color(colors.cnames[color[i]])))
                     if (i==0) | (i==int(m*0.25)) | (i==int(m*0.5)) | (i==int(m*0.75)) | (i==m-1):
@@ -95,7 +95,7 @@ with open('/home/ubuntu/ZZH/mv/size1.txt','r+') as f:
                     img = np.array(img_pil)
                     cv2.rectangle(img, (x1, y1), (x2, y2), color=RGB2BGR(colors.hex2color(colors.cnames[color[i]])), thickness=3)
                 city = list(y[ind][0][0])
-                cv2.imwrite('./size/' + city[0] + city[1]+'.png',img)
+                cv2.imwrite('./size/' + city[0] + city[1]+'.png',img[(place_y-5*res-13*res*(m+1)-10):(1000*res),:])
 
             x=np.zeros((50,3),dtype=np.float)
             y=np.zeros(shape=(50,2)).astype(np.str_)
