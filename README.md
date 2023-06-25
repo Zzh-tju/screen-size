@@ -5,6 +5,20 @@
 ### 数据准备
 登录QQ PC端，快捷键Ctrl+Alt+O，识别文本，保存于name.txt，银幕尺寸信息保存于size.txt，这里只采集了IMAX影厅。
 
+### 环境配置
+
+Anaconda，python3.8
+
+```
+conda install numpy
+
+pip install matplotlib
+
+pip install opencv-python
+
+pip install Pillow
+```
+
 ### 绘制步骤
 
 运行`convert.py`，将size.txt转成size1.txt。
