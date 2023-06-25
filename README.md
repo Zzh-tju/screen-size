@@ -7,10 +7,14 @@
 
 ### 环境配置
 
-Anaconda，python3.8
+安装Anaconda3
 
 ```
-conda install numpy
+conda create -n drawsize python=3.8
+
+conda activate drawsize
+
+pip install numpy
 
 pip install matplotlib
 
